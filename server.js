@@ -48,12 +48,16 @@ app.get('/health', (_req, res) => {
   res.status(200).type('text').send('ok');
 });
 
+function sendHtml(res, body, status = 200) {
+  res.status(status).set('Content-Type', 'text/html; charset=utf-8').send(body);
+}
+
 app.get('/', (_req, res) => {
-  res.type('html').send(html.homePage());
+  sendHtml(res, html.homePage());
 });
 
 app.get('/method', (_req, res) => {
-  res.type('html').send(html.methodPage());
+  sendHtml(res, html.methodPage());
 });
 
 app.get('/robots.txt', (_req, res) => {
@@ -122,12 +126,12 @@ app.get('/tables/:slug.md', (req, res) => {
 
 app.get('/tables/:slug', (req, res) => {
   const table = tables.bySlug(req.params.slug);
-  if (!table) return res.status(404).type('html').send(html.notFound());
-  res.type('html').send(html.tablePage(table));
+  if (!table) return sendHtml(res, html.notFound(), 404);
+  sendHtml(res, html.tablePage(table));
 });
 
 app.use((_req, res) => {
-  res.status(404).type('html').send(html.notFound());
+  sendHtml(res, html.notFound(), 404);
 });
 
 app.listen(PORT, () => {

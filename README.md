@@ -4,6 +4,10 @@ Source-linked tables for **money, local NC/FL rules, and jobsite-as-work**.
 
 Not exam prep. Certification pathways stay on [PassLat](https://passlat.com). Brand split: `All_Sites/Passlat.com/docs/BRAND-BOUNDARY.md` and `Desktop/COMPILATION-TABLES-SITE-PLAN.md`.
 
+Live: [https://cite-hubs-production.up.railway.app](https://cite-hubs-production.up.railway.app)  
+GitHub: [kevindunn766/cite-hubs](https://github.com/kevindunn766/cite-hubs)  
+Railway project: **Cite Hubs**
+
 Live tables ship as HTML + `/x.json` + `/x.md`, with named compiler, as-of date, and outbound official sources. No ads on fact URLs.
 
 ## Run
