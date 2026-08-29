@@ -1,0 +1,96 @@
+{
+  "slug": "estimated-tax-2026",
+  "cluster": "money",
+  "title": "2026 estimated tax quarters + 25% / safe-harbor calendar",
+  "description": "2026 federal estimated-tax due dates (Apr 15, Jun 15, Sep 15, Jan 15 2027) joined with the 90/100/110% safe-harbor tests from IRS Pub 505. Not tax advice.",
+  "asOf": "2026-08-29",
+  "taxYear": 2026,
+  "extract": "Calendar-year individuals who pay federal estimated tax have four 2026 installments. Income from January 1–March 31 is due April 15, 2026. April 1–May 31 is due June 15, 2026. June 1–August 31 is due September 15, 2026. September 1–December 31 is due January 15, 2027. None of those 2026 dates fall on a weekend or federal holiday, so they do not shift. The January 15 payment is not required if you file the 2026 return and pay the balance by February 1, 2027 (IRS Form 1040-ES). Underpayment penalties are avoided if withholding plus estimates equal the lesser of 90% of the current-year tax or 100% of the prior-year tax (110% of prior-year tax if prior-year AGI was more than $150,000, or $75,000 if married filing separately). This page joins the installment calendar and the safe-harbor percents. Compiled 2026-08-29 from IRS estimated-tax FAQs and Publication 505. Not tax advice.",
+  "faq": [
+    {
+      "q": "When are 2026 federal estimated taxes due?",
+      "a": "April 15, 2026; June 15, 2026; September 15, 2026; and January 15, 2027 for calendar-year individuals."
+    },
+    {
+      "q": "What is the estimated-tax safe harbor?",
+      "a": "Pay the lesser of 90% of the current-year tax or 100% of last year’s tax. Use 110% of last year’s tax if prior-year AGI was over $150,000 ($75,000 married filing separately)."
+    },
+    {
+      "q": "Can I skip the January 15, 2027 payment?",
+      "a": "Yes, if you file your 2026 return and pay in full by February 1, 2027."
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRS: When are quarterly estimated tax payments due?",
+      "url": "https://www.irs.gov/faqs/estimated-tax/individuals/individuals-2"
+    },
+    {
+      "title": "IRS Publication 505, Tax Withholding and Estimated Tax",
+      "url": "https://www.irs.gov/publications/p505"
+    },
+    {
+      "title": "IRS: Estimated taxes",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+    }
+  ],
+  "tables": [
+    {
+      "id": "calendar",
+      "caption": "Federal estimated-tax installments for calendar-year 2026 income.",
+      "columns": [
+        { "key": "payment", "label": "Payment" },
+        { "key": "period", "label": "Income period" },
+        { "key": "due", "label": "Due date" },
+        { "key": "notes", "label": "Notes" }
+      ],
+      "rows": [
+        {
+          "payment": "First",
+          "period": "January 1 – March 31, 2026",
+          "due": "April 15, 2026",
+          "notes": "Wednesday; no weekend/holiday shift."
+        },
+        {
+          "payment": "Second",
+          "period": "April 1 – May 31, 2026",
+          "due": "June 15, 2026",
+          "notes": "The second period is two months, not a calendar quarter."
+        },
+        {
+          "payment": "Third",
+          "period": "June 1 – August 31, 2026",
+          "due": "September 15, 2026",
+          "notes": "Wednesday; no weekend/holiday shift."
+        },
+        {
+          "payment": "Fourth",
+          "period": "September 1 – December 31, 2026",
+          "due": "January 15, 2027",
+          "notes": "Not required if you file and pay the 2026 return by February 1, 2027."
+        }
+      ]
+    },
+    {
+      "id": "safe-harbor",
+      "caption": "Annualized safe harbor (withholding + estimates). Lesser of the two tests.",
+      "columns": [
+        { "key": "who", "label": "Prior-year AGI" },
+        { "key": "current", "label": "Current-year test" },
+        { "key": "prior", "label": "Prior-year test" }
+      ],
+      "rows": [
+        {
+          "who": "$150,000 or less (married filing separately: $75,000 or less)",
+          "current": "90% of this year’s tax",
+          "prior": "100% of last year’s tax"
+        },
+        {
+          "who": "More than $150,000 (married filing separately: more than $75,000)",
+          "current": "90% of this year’s tax",
+          "prior": "110% of last year’s tax"
+        }
+      ]
+    }
+  ]
+}

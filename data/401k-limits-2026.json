@@ -1,0 +1,128 @@
+{
+  "slug": "401k-limits-2026",
+  "cluster": "money",
+  "title": "2026 401(k) elective deferral + catch-up limits (IRS join)",
+  "description": "2026 IRS join: $24,500 elective deferral, $8,000 age-50 catch-up, $11,250 ages 60–63, SIMPLE and 415(c) alongside. From Notice 2025-67. Not tax advice.",
+  "asOf": "2026-08-29",
+  "taxYear": 2026,
+  "extract": "For 2026, IRS Notice 2025-67 (IRB 2025-49) sets the section 402(g) elective-deferral limit at $24,500 (up from $23,500). The age-50 catch-up under section 414(v)(2)(B)(i) for plans other than SIMPLE 401(k)/SIMPLE IRA is $8,000. SECURE 2.0’s higher catch-up for employees who turn 60, 61, 62, or 63 in the calendar year is $11,250 for 2026. Combined employee elective deferrals plus catch-up are therefore $32,500 (age 50–59 or 64+) or $35,750 (age 60–63), unless the plan’s own limit is lower. Catch-up is not counted until deferrals exceed the $24,500 limit, the ADP test limit, or the plan limit. SIMPLE 401(k) uses a separate 2026 deferral of $17,000 and catch-up of $4,000 ($5,250 at ages 60–63). The section 415(c) annual-addition limit is $72,000; the compensation cap is $360,000. Beginning in 2026, if prior-year FICA wages from the plan sponsor exceeded $150,000, catch-up to a plan that offers Roth must be Roth. This page joins those IRS figures on one table. Compiled 2026-08-29. Not tax advice. Confirm with the plan document and a tax professional.",
+  "faq": [
+    {
+      "q": "What is the 2026 401(k) elective deferral limit?",
+      "a": "IRS Notice 2025-67 sets the 2026 section 402(g) elective-deferral limit at $24,500."
+    },
+    {
+      "q": "What is the 2026 401(k) catch-up for age 50 versus ages 60–63?",
+      "a": "Age 50+ catch-up is $8,000. Employees turning 60, 61, 62, or 63 in 2026 may use $11,250. Combined with the $24,500 deferral that is $32,500 or $35,750 unless the plan is lower."
+    },
+    {
+      "q": "When must 2026 catch-up contributions be Roth?",
+      "a": "If prior-year FICA wages from the plan sponsor exceeded $150,000, catch-up to a plan that offers Roth must be Roth beginning in 2026."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Notice 2025-67, IRB 2025-49 (2026 COLA amounts)",
+      "url": "https://www.irs.gov/irb/2025-49_IRB"
+    },
+    {
+      "title": "IRB 2025-49 PDF (Notice 2025-67)",
+      "url": "https://www.irs.gov/pub/irs-irbs/irb25-49.pdf"
+    },
+    {
+      "title": "IRS: COLA increases for dollar limitations on benefits and contributions",
+      "url": "https://www.irs.gov/retirement-plans/cola-increases-for-dollar-limitations-on-benefits-and-contributions"
+    },
+    {
+      "title": "IRS: 401(k) and profit-sharing plan contribution limits",
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits"
+    },
+    {
+      "title": "IRS: Catch-up contributions",
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-catch-up-contributions"
+    }
+  ],
+  "tables": [
+    {
+      "id": "elective",
+      "caption": "Employee elective + catch-up, tax year 2026. Combined column is elective + catch-up.",
+      "columns": [
+        { "key": "who", "label": "Who" },
+        { "key": "electiveUsd", "label": "Elective", "format": "usd" },
+        { "key": "catchupUsd", "label": "Catch-up", "format": "usd" },
+        { "key": "combinedUsd", "label": "Combined", "format": "usd" },
+        { "key": "notes", "label": "Notes" }
+      ],
+      "rows": [
+        {
+          "who": "401(k) / 403(b) / governmental 457(b), under age 50",
+          "electiveUsd": 24500,
+          "catchupUsd": 0,
+          "combinedUsd": 24500,
+          "notes": "Plan terms may impose a lower elective-deferral cap."
+        },
+        {
+          "who": "Same plans, age 50+ and not turning 60–63 in 2026",
+          "electiveUsd": 24500,
+          "catchupUsd": 8000,
+          "combinedUsd": 32500,
+          "notes": "Catch-up starts only after hitting the $24,500, ADP, or plan limit."
+        },
+        {
+          "who": "Same plans, turning 60, 61, 62, or 63 in 2026",
+          "electiveUsd": 24500,
+          "catchupUsd": 11250,
+          "combinedUsd": 35750,
+          "notes": "SECURE 2.0 super catch-up; Notice 2025-67 leaves $11,250 unchanged from 2025."
+        },
+        {
+          "who": "SIMPLE 401(k), under age 50",
+          "electiveUsd": 17000,
+          "catchupUsd": 0,
+          "combinedUsd": 17000,
+          "notes": "Separate 402(g)-style cap for SIMPLE 401(k)."
+        },
+        {
+          "who": "SIMPLE 401(k), age 50+ and not turning 60–63 in 2026",
+          "electiveUsd": 17000,
+          "catchupUsd": 4000,
+          "combinedUsd": 21000,
+          "notes": "SIMPLE catch-up is section 414(v)(2)(B)(ii), not the $8,000 figure."
+        },
+        {
+          "who": "SIMPLE 401(k), turning 60, 61, 62, or 63 in 2026",
+          "electiveUsd": 17000,
+          "catchupUsd": 5250,
+          "combinedUsd": 22250,
+          "notes": "SIMPLE super catch-up for 2026 is $5,250."
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "caption": "Other 2026 dollar limits used in the join.",
+      "columns": [
+        { "key": "item", "label": "Item" },
+        { "key": "valueUsd", "label": "Amount", "format": "usd" },
+        { "key": "notes", "label": "Notes" }
+      ],
+      "rows": [
+        {
+          "item": "Section 415(c) annual additions",
+          "valueUsd": 72000,
+          "notes": "Employer + employee additions (catch-up generally sits on top of 415)."
+        },
+        {
+          "item": "Annual compensation cap (§401(a)(17))",
+          "valueUsd": 360000,
+          "notes": "Compensation counted for allocations and testing."
+        },
+        {
+          "item": "Roth catch-up wage threshold (prior-year FICA)",
+          "valueUsd": 150000,
+          "notes": "If 2025 wages from the sponsor exceeded $150,000, 2026 catch-up must be Roth when the plan has a Roth feature."
+        }
+      ]
+    }
+  ]
+}

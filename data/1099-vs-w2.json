@@ -1,0 +1,75 @@
+{
+  "slug": "1099-vs-w2",
+  "cluster": "money",
+  "title": "1099-NEC vs W-2: who gets which form",
+  "description": "Decision table for common-law employees (W-2) versus independent contractors paid $600+ (1099-NEC), compiled from IRS contractor/employee guidance. Not tax or employment-law advice.",
+  "asOf": "2026-08-29",
+  "taxYear": 2026,
+  "extract": "The form follows the relationship, not the worker’s preference. A common-law employee is reported on Form W-2. The IRS looks at behavioral control, financial control, and the type of relationship (written contract, benefits, permanence, whether the work is a key business activity). An independent contractor paid $600 or more of nonemployee compensation in the year is generally reported on Form 1099-NEC. Payments under that $600 federal 1099-NEC threshold do not require a 1099-NEC, though records still matter. The same person can be a W-2 employee for one role and a 1099-NEC contractor for a separate, genuinely independent engagement. Form 1099-K (payment cards and third-party networks) is a different form and is not a substitute for W-2 or 1099-NEC. This page is a decision table, not a facts-and-circumstances opinion. Compiled 2026-08-29 from IRS independent-contractor guidance and Form 1099-NEC instructions. Not tax or employment-law advice.",
+  "faq": [
+    {
+      "q": "Does calling someone a contractor avoid a W-2?",
+      "a": "No. If the payer has the right to control how the work is done, the IRS treats the worker as an employee regardless of the contract label."
+    },
+    {
+      "q": "When is Form 1099-NEC required?",
+      "a": "Generally when you pay an unincorporated independent contractor $600 or more of nonemployee compensation in the year."
+    },
+    {
+      "q": "Is 1099-K the same as 1099-NEC?",
+      "a": "No. 1099-K reports certain payment-card and third-party network transactions. Employee wages still go on a W-2."
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRS: Independent contractor (self-employed) or employee?",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee"
+    },
+    {
+      "title": "IRS: About Form 1099-NEC",
+      "url": "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+    },
+    {
+      "title": "IRS: About Form W-2",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-2"
+    }
+  ],
+  "tables": [
+    {
+      "id": "decision",
+      "caption": "Which information return applies. The relationship controls the form.",
+      "columns": [
+        { "key": "situation", "label": "Situation" },
+        { "key": "form", "label": "Form" },
+        { "key": "why", "label": "Why" }
+      ],
+      "rows": [
+        {
+          "situation": "Payer controls when, where, and how the work is done (common-law employee)",
+          "form": "W-2",
+          "why": "Behavioral, financial, and relationship control — not the contract label."
+        },
+        {
+          "situation": "Independent contractor; $600 or more of nonemployee compensation in the year",
+          "form": "1099-NEC",
+          "why": "Federal 1099-NEC dollar threshold for most payers."
+        },
+        {
+          "situation": "Independent contractor; under $600 in the year",
+          "form": "No 1099-NEC required",
+          "why": "Keep books anyway; state rules can still differ."
+        },
+        {
+          "situation": "Same person: employee in one role, genuinely independent in another",
+          "form": "W-2 and 1099-NEC",
+          "why": "Separate relationships; do not mix the payments on one form."
+        },
+        {
+          "situation": "Payment-card or third-party network sales",
+          "form": "1099-K (not NEC/W-2)",
+          "why": "Different statute and filer; not a substitute for wages or NEC."
+        }
+      ]
+    }
+  ]
+}

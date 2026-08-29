@@ -1,0 +1,18 @@
+{
+  "name": "cite-hubs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cite Hubs — source-linked compilations for money, local rules, and jobsite-as-work. Not exam prep.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0"
+  }
+}
