@@ -60,6 +60,10 @@ app.get('/method', (_req, res) => {
   sendHtml(res, html.methodPage());
 });
 
+app.get('/privacy', (_req, res) => {
+  sendHtml(res, html.privacyPage());
+});
+
 app.get('/robots.txt', (_req, res) => {
   const origin = brand.siteUrl();
   res
@@ -74,20 +78,17 @@ app.get('/sitemap.xml', (_req, res) => {
   const urls = [
     { loc: `${origin}/`, lastmod: '2026-08-29' },
     { loc: `${origin}/method`, lastmod: '2026-08-29' },
+    { loc: `${origin}/privacy`, lastmod: '2026-08-29' },
     ...tables.loadAll().map((t) => ({
       loc: `${origin}/tables/${t.slug}`,
       lastmod: t.asOf,
     })),
   ];
-  const body = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(
-    (u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`,
-  )
-  .join('\n')}
-</urlset>
-`;
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map(
+      (u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`,
+    )
+    .join('\n')}\n</urlset>\n`;
   res.type('application/xml').send(body);
 });
 
@@ -106,7 +107,15 @@ app.get('/llms.txt', (_req, res) => {
     lines.push(`- JSON: ${origin}/tables/${t.slug}.json`);
     lines.push(`- Markdown: ${origin}/tables/${t.slug}.md`);
   }
-  lines.push('', '## Site', '', `- [Home](${origin}/)`, `- [Method](${origin}/method)`, '');
+  lines.push(
+    '',
+    '## Site',
+    '',
+    `- [Home](${origin}/)`,
+    `- [Method](${origin}/method)`,
+    `- [Privacy](${origin}/privacy)`,
+    '',
+  );
   res.type('text/plain; charset=utf-8').send(lines.join('\n'));
 });
 
