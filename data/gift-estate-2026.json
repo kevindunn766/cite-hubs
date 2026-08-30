@@ -1,0 +1,99 @@
+{
+  "slug": "gift-estate-2026",
+  "cluster": "money",
+  "title": "2026 gift-tax annual exclusion + estate basic exclusion",
+  "description": "2026 IRS join: $19,000 annual gift exclusion per donee, $194,000 non-citizen-spouse annual exclusion, $15,000,000 basic exclusion for estate/gift/GST. From IR-2025-103, Rev. Proc. 2025-32, and IRC \u00a72010 as amended by P.L. 119-21. Not tax advice.",
+  "asOf": "2026-08-29",
+  "taxYear": 2026,
+  "extract": "For calendar year 2026 the IRS annual exclusion for gifts to any one person stays at $19,000 (same as 2025). The annual exclusion for gifts to a spouse who is not a U.S. citizen is $194,000 (up from $190,000). Estates of decedents who die in 2026 have a basic exclusion amount of $15,000,000, up from $13,990,000 for 2025 deaths. Public Law 119-21 (Working Families Tax Cuts / OBBBA \u00a770106) set that $15,000,000 figure in IRC \u00a72010(c)(3) for 2026; inflation adjustment resumes for 2027. The generation-skipping transfer exemption for 2026 equals the same $15,000,000. Spouses who elect gift-splitting can combine two $19,000 annual exclusions to the same donee. A gift above the annual exclusion generally requires Form 709 even when no tax is due because the excess uses lifetime applicable exclusion. This page joins the annual-exclusion table and the basic-exclusion history on one URL. Compiled 2026-08-29. Not tax, estate, or legal advice.",
+  "faq": [
+    {
+      "q": "What is the 2026 annual gift-tax exclusion?",
+      "a": "IRS Rev. Proc. 2025-32 keeps the 2026 annual exclusion at $19,000 per donee, the same dollar amount as 2025."
+    },
+    {
+      "q": "What is the 2026 estate-tax basic exclusion?",
+      "a": "Estates of decedents who die in 2026 have a basic exclusion of $15,000,000. IRS IR-2025-103 and the estate/gift whats new page cite P.L. 119-21 \u00a770106."
+    },
+    {
+      "q": "Does a gift over $19,000 automatically create tax?",
+      "a": "Usually it creates a filing duty on Form 709. Tax is due only after lifetime applicable exclusion is used up. Confirm with Form 709 instructions."
+    }
+  ],
+  "sources": [
+    {
+      "title": "IR-2025-103: IRS releases tax inflation adjustments for tax year 2026",
+      "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+    },
+    {
+      "title": "IRS: Whats new \u2014 Estate and gift tax (2026 basic exclusion $15,000,000; annual exclusion table)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/whats-new-estate-and-gift-tax"
+    },
+    {
+      "title": "IRS FAQ: Gifts and inheritances (annual exclusion $19,000 for 2025 and 2026)",
+      "url": "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/gifts-inheritances/gifts-inheritances-1"
+    },
+    {
+      "title": "Rev. Proc. 2025-32 (inflation adjustments; IRB 2025-44)",
+      "url": "https://www.irs.gov/irb"
+    }
+  ],
+  "tables": [
+    {
+      "id": "annual",
+      "caption": "Annual gift-tax exclusion per donee. 2026 figures from Rev. Proc. 2025-32 / IRS estate-and-gift whats new.",
+      "columns": [
+        { "key": "year", "label": "Year of gift" },
+        { "key": "exclusionUsd", "label": "Per donee", "format": "usd" },
+        { "key": "noncitizenSpouseUsd", "label": "Non-citizen spouse", "format": "usd" },
+        { "key": "notes", "label": "Notes" }
+      ],
+      "rows": [
+        {
+          "year": "2024",
+          "exclusionUsd": 18000,
+          "noncitizenSpouseUsd": 185000,
+          "notes": "Rev. Proc. 2023-34."
+        },
+        {
+          "year": "2025",
+          "exclusionUsd": 19000,
+          "noncitizenSpouseUsd": 190000,
+          "notes": "Rev. Proc. 2024-40."
+        },
+        {
+          "year": "2026",
+          "exclusionUsd": 19000,
+          "noncitizenSpouseUsd": 194000,
+          "notes": "Per-donee amount unchanged; non-citizen spouse +$4,000."
+        }
+      ]
+    },
+    {
+      "id": "basic-exclusion",
+      "caption": "Basic exclusion amount (estate) and GST exemption. 2026 is statutory $15,000,000, not the 2025 inflation path.",
+      "columns": [
+        { "key": "year", "label": "Year of death / gift" },
+        { "key": "basicUsd", "label": "Basic exclusion", "format": "usd" },
+        { "key": "notes", "label": "Notes" }
+      ],
+      "rows": [
+        {
+          "year": "2024",
+          "basicUsd": 13610000,
+          "notes": "Inflation-adjusted under then-current \u00a72010(c)(3)."
+        },
+        {
+          "year": "2025",
+          "basicUsd": 13990000,
+          "notes": "Last year before P.L. 119-21 $15,000,000 floor."
+        },
+        {
+          "year": "2026",
+          "basicUsd": 15000000,
+          "notes": "P.L. 119-21 \u00a770106; GST exemption matches. Inflation resumes 2027."
+        }
+      ]
+    }
+  ]
+}
