@@ -1,0 +1,42 @@
+# Observe-only CI (2026-10-03). Runs on every push and pull request; Railway does
+# not wait for it yet, so deploys are unchanged. When these checks have been green
+# for a while, turn on Railway's "wait for CI" to make them gate deploys.
+name: ci
+on:
+  push:
+  pull_request:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Every server file parses
+        run: |
+          fail=0
+          for f in $(git ls-files '*.js' '*.mjs' '*.cjs' | grep -v -E '^(public|static|assets|themes|vendor)/|\.min\.js$'); do
+            node --check "$f" || { echo "::error file=$f::does not parse"; fail=1; }
+          done
+          exit $fail
+      - name: Server starts and answers
+        run: |
+          PORT=4000 npm start > boot.log 2>&1 &
+          for i in $(seq 1 60); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:4000/ || true)
+            if [ "$code" != "000" ]; then
+              echo "GET / -> $code"
+              if [ "$code" -lt 500 ]; then exit 0; fi
+              cat boot.log; exit 1
+            fi
+            sleep 1
+          done
+          echo "server did not answer within 60 s"; cat boot.log; exit 1
