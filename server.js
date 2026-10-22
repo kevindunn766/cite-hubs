@@ -8,6 +8,18 @@ const tables = require('./lib/tables');
 const html = require('./lib/html');
 
 const app = express();
+// Browser defenses that preserve existing scripts, image hosts, and styles.
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Content-Security-Policy', "frame-ancestors 'self'; object-src 'none'; base-uri 'self'");
+  if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000');
+  }
+  next();
+});
+
 app.set('trust proxy', 1);
 app.disable('x-powered-by');
 
